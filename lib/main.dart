@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:hello_flutter1/game.dart';
+import 'package:hello_flutter1/pages/game/game_page.dart';
+
+
 
 void main() {
-  runApp(const GamePage());
+  runApp(const MyApp());
 }
 
-class GamePage extends StatelessWidget {
-  const GamePage({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
 
   @override

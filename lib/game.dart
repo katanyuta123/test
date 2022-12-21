@@ -7,15 +7,14 @@ enum GuessResult{
     correct, tooHigh, tooLow
 }
 
-
-class Game{       //ชื่อคลาสไม่จำเป็นต้องเป็นชื่อเดียวกันกับไฟล์
+class Game{
   final int answer  ;
 
   int _totalGuesses = 0;
 
    Game({int maxRandom = 100})
        : answer = Random().nextInt(maxRandom) + 1 {
-     print('Answer is $answer');
+     print('Enter a maximum number to random: $answer');
 
 
    }
@@ -23,6 +22,7 @@ class Game{       //ชื่อคลาสไม่จำเป็นต้อ
     _totalGuesses++;
     if (guess == answer) {
       return GuessResult.correct;
+
     } else if (guess > answer) {
       return GuessResult.tooHigh;
     } else {
